@@ -102,6 +102,7 @@ header {
   display: flex;
   padding: 1em 0;
   justify-content: space-between;
+  position: relative;
   box-shadow: 0px 7px 7px -4px rgba(95, 92, 92, 0.42);
   -webkit-box-shadow: 0px 7px 7px -4px rgba(95, 92, 92, 0.42);
   -moz-box-shadow: 0px 7px 7px -4px rgba(95, 92, 92, 0.42);
@@ -191,9 +192,11 @@ header .header__content {
 }
 
 .menu {
-  display: flex;
   list-style: none;
   display: none;
+  background-color: var(--white);
+  padding: 0;
+  margin: 0;
 }
 
 .menu__button {
@@ -206,6 +209,39 @@ header .header__content {
   text-decoration: none;
   color: var(--grayblue);
   padding: 0 1em;
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__checkbox {
+  display: none;
+}
+
+.menu__checkbox:checked ~ .menu__button {
+  background: url("../img/icon-close.svg") no-repeat center;
+}
+
+.menu__checkbox:checked ~ .menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  padding: 1em;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.75);
+}
+
+.menu__checkbox:checked ~ .menu a {
+  background: white;
+  padding: 1em;
+  display: block;
+  text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
