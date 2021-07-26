@@ -1,0 +1,103 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --blue: hsl(219, 100%, 42%);
+    --grayblue: hsl(233, 8%, 62%);
+    --DarkBlue: hsl(233, 26%, 24%);
+    --BlueKing: hsl(228, 67%, 19%);
+    --BlueFooter: hsl(225, 60%, 14%);
+    --Magenta: hsl(337, 97%, 51%);
+    --access: hsl(222, 62%, 27%);
+
+    --wraperSpace: 1.5em;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+    color: var(--grayblue)
+}
+
+
+.copy {
+    line-height: 1.7;
+    font-size: .9em;
+
+}
+
+.wrapper {
+    padding: 0 var(--wraperSpace);
+    max-width: 1115px;
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button {
+    border: none;
+    padding: .9em 2.5em;
+    font-size: 1em;
+    border-radius: 1.5em;
+    color: var(--white);
+    background-color: var(--Magenta);
+}
+
+.benefits {
+    background-color: var(--BlueKing);
+    color: var(--white);
+    text-align: center;
+    padding: 2em 0;
+}
+
+.background {
+    width: 375px;
+    height: 112px;
+    background: url('../img/benefits-resource.svg') no-repeat center;
+    background-size: cover;
+
+    @media screen and (min-width: 768px) {
+        background: none;
+        height: 20px;
+    }
+}
+
+.access {
+    
+    background-image: linear-gradient(var(--BlueKing) 50%, var(--BlueFooter) 50%);
+    // background-color: red;
+    text-align: center;
+
+    .early-access {
+        height: auto;
+        margin: 0 auto;
+        background-color: var(--access);
+        color: var(--white);
+        padding: 1em 2em;
+        // border: 1px solid yellow;
+        border-radius: 20px;
+        box-shadow: 0px 7px 7px -4px rgba(95, 92, 92, 0.42);
+        -webkit-box-shadow: 0px 7px 7px -4px rgba(95, 92, 92, 0.42);
+        -moz-box-shadow: 0px 7px 7px -4px rgba(95, 92, 92, 0.42);
+
+        .copy {
+            padding: 0 2em;
+        }
+
+        .cta {
+            display: inline-block;
+            width: 100%;
+
+            input {
+                margin-bottom: 1em;
+                border-radius: 20px;
+                border: none;
+                padding: 1em 2em;
+                width: 60%;
+            }
+
+            button {
+                margin-bottom: 2em;
+            }
+        }
+    }
+}

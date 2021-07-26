@@ -1,0 +1,84 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --blue: hsl(219, 100%, 42%);
+    --grayblue: hsl(233, 8%, 62%);
+    --DarkBlue: hsl(233, 26%, 24%);
+    --BlueKing: hsl(228, 67%, 19%);
+    --BlueFooter: hsl(225, 60%, 14%);
+    --Magenta: hsl(337, 97%, 51%);
+    --access: hsl(222, 62%, 27%);
+
+    --wraperSpace: 1.5em;
+}
+
+
+footer {
+    background-color: var(--BlueFooter);
+    padding: 4em 1em;
+    color: var(--white);
+    font-size: .9em;
+
+    .footer-copy {
+        text-align: left;
+    }
+
+
+    img {
+        width: 250px;
+    }
+
+    .footer-list {
+        display: flex;
+        justify-content: space-between;
+
+
+
+        ul {
+            list-style-type: none;
+            text-align: left;
+            padding-left: 0;
+        
+            li {
+                padding: 1em 0;
+        
+                a {
+                    color: var(--white);
+                    text-decoration: none;
+                }
+            }
+        }
+    } 
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2em;
+
+        img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    footer {
+        .wrapper {
+            display: grid;
+            grid-template-columns: 400px 400px 1fr;
+            // border: 1px solid red;
+
+            .footer-copy {
+                padding: 0 2em;
+            }
+
+            .footer-list {
+                padding: 0 2em;
+            }
+        }
+    }
+
+}
